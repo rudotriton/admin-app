@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const OptionsWrapper = styled.div`
-  margin: 0 auto;
+  margin: 1rem auto;
   width: min-content;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@ const StyledLabel = styled.label`
   padding-left: 35px;
   margin-bottom: 1rem;
   cursor: pointer;
-  font-size: 22px;
   user-select: none;
 
   &:hover input + span {
@@ -65,8 +64,8 @@ const Checkmark = styled.span`
 
 const FilterField = styled.input`
   font-size: 22px;
-  margin-left: 28px;
   outline: none;
+  margin: 1rem;
   border: none;
   border-bottom: 2px solid #000;
 
@@ -85,14 +84,13 @@ const Options = (props) => (
         />
       <Checkmark />
     </StyledLabel>
-    <StyledLabel htmlFor="filterField">Search
       <FilterField
         id="filterField"
         type="text"
         onChange={props.onTextChange}
         value={props.filter.text}
-        />
-    </StyledLabel>
+        placeholder="Search"
+      />
   </OptionsWrapper>
 )
 
